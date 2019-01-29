@@ -1,4 +1,5 @@
 // Copyright (c) 2018, The FOCUS Project
+// Copyright (c) 2018, The NERVA Project
 // Copyright (c) 2017-2018, The Masari Project
 // Copyright (c) 2014-2018, The Monero Project
 // 
