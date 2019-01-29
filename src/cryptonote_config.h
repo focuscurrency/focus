@@ -73,9 +73,9 @@
 #define DYNAMIC_FEE_PER_KB_BASE_FEE                     ((uint64_t)400000) // 4 * pow(10,5)))
 #define DYNAMIC_FEE_PER_KB_BASE_BLOCK_REWARD            ((uint64_t)10000000000) // 10 * pow(10,9)
 
-#define DIFFICULTY_TARGET                               60  // seconds
+#define DIFFICULTY_TARGET                               40  // seconds
 
-#define UNCLE_DIFFICULTY_TARGET                         DIFFICULTY_TARGET/4
+#define UNCLE_DIFFICULTY_TARGET                         DIFFICULTY_TARGET/2
 #define UNCLE_REWARD_RATIO                              2
 #define NEPHEW_REWARD_RATIO                             20
 #define UNCLE_MINING_FORK_HEIGHT                        2

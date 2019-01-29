@@ -7,7 +7,7 @@ bindir=${dir}/builder/build/dev/$1/bin
 nd=${bindir}/focusd
 nw=${bindir}/focus-wallet-cli
 nr=${bindir}/focus-wallet-rpc
-datadir=~/.focus/stagenet
+datadir=~/.focusdev/stagenet
 
 addressA="fojuEDfpvvyUr87eQjjYQ22294gTGdcEz4Co7NfBBv5xe22RVQpogXzF77m3xZQ2cFAyzU5Si9YVpErkL2fGYG3Y34kT4Pemr"
 addressB="fokdJT6oxGvCXe4GoP7NL9fGTe2Qv7BZCCYDLE7fxTXTNCXYfNhdRCe9FHzk1UYyA4Mu4BRHmEEzzd8dYZuK6Xoq2he7AaEp8"
