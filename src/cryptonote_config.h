@@ -110,8 +110,8 @@
 #define P2P_DEFAULT_WHITELIST_CONNECTIONS_PERCENT       70
 #define P2P_DEFAULT_ANCHOR_CONNECTIONS_COUNT            2
 
-#define SUPPORTED_MIN_VERSION_STR                       "0.1.5.0"
-#define SUPPORTED_MIN_VERSION_HF_STR                    "0.1.5.0"
+#define SUPPORTED_MIN_VERSION_STR                       "0.0.0.1"
+#define SUPPORTED_MIN_VERSION_HF_STR                    "0.0.0.1"
 
 #define HF_SUPPORTED_MIN_VERSION_TESTNET                version_string_to_integer(SUPPORTED_MIN_VERSION_HF_STR)
 #define HF_SUPPORTED_MIN_VERSION_MAINNET                version_string_to_integer(SUPPORTED_MIN_VERSION_STR)
@@ -158,7 +158,7 @@ namespace config
   boost::uuids::uuid const NETWORK_ID = { {
       0x12, 0x30, 0xF1, 0xA1, 0x12, 0x71 , 0x61, 0x04 , 0x41, 0x61, 0x17, 0x31, 0x16, 0xA1, 0x00, 0x82
     } }; // 
-  std::string const GENESIS_TX = "010a14ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210143df26ab4a91b503c332f86d82adff32cbd7c0ef897bb24876addb42e62dbeab00";
+  std::string const GENESIS_TX = "010a14ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101d6b59d337acbb433abf3755f08575b33f073218ba6890c5637e6fd652c68813f00";
 
   uint32_t const GENESIS_NONCE = 10000;
 
