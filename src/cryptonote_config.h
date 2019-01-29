@@ -52,8 +52,8 @@
 #define BULLETPROOF_MAX_OUTPUTS                         16
 #define BULLETPROOF_FORK_HEIGHT                         2
 
-#define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW            12
-#define CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT           60*5
+#define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW               12
+#define CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT              60*5
 
 
 #define MONEY_SUPPLY                                    ((uint64_t)(21000000000000000))
@@ -73,17 +73,17 @@
 #define DYNAMIC_FEE_PER_KB_BASE_FEE                     ((uint64_t)400000000) // 4 * pow(10,8)))
 #define DYNAMIC_FEE_PER_KB_BASE_BLOCK_REWARD            ((uint64_t)10000000000000) // 10 * pow(10,12)
 
-#define DIFFICULTY_TARGET                               60  // seconds
+#define DIFFICULTY_TARGET                               45  // seconds
 
 #define UNCLE_DIFFICULTY_TARGET                         DIFFICULTY_TARGET/4
 #define UNCLE_REWARD_RATIO                              2
 #define NEPHEW_REWARD_RATIO                             20
-#define UNCLE_MINING_FORK_HEIGHT                       2
+#define UNCLE_MINING_FORK_HEIGHT                        2
 
 #define DIFFICULTY_BLOCKS_ESTIMATE_TIMESPAN             DIFFICULTY_TARGET //just alias; used by tests
-#define DIFFICULTY_WINDOW                            17
-#define DIFFICULTY_CUT                              6
-#define DIFFICULTY_BLOCKS_COUNT                     DIFFICULTY_WINDOW + DIFFICULTY_CUT*2
+#define DIFFICULTY_WINDOW                               17
+#define DIFFICULTY_CUT                                  6
+#define DIFFICULTY_BLOCKS_COUNT                         DIFFICULTY_WINDOW + DIFFICULTY_CUT*2
 
 #define CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_SECONDS_V1   DIFFICULTY_TARGET * CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS
 #define CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_BLOCKS       1
@@ -91,8 +91,8 @@
 #define BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT          10000  //by default, blocks ids count in synchronizing
 #define BLOCKS_SYNCHRONIZING_DEFAULT_COUNT              20     //by default, blocks count in blocks downloading
 
-#define CRYPTONOTE_MEMPOOL_TX_LIVETIME                    (86400*3) //seconds, three days
-#define CRYPTONOTE_MEMPOOL_TX_FROM_ALT_BLOCK_LIVETIME     604800 //seconds, one week
+#define CRYPTONOTE_MEMPOOL_TX_LIVETIME                  (86400*3) //seconds, three days
+#define CRYPTONOTE_MEMPOOL_TX_FROM_ALT_BLOCK_LIVETIME   604800 //seconds, one week
 
 #define COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT           1000
 
@@ -128,11 +128,11 @@
 
 #define ALLOW_DEBUG_COMMANDS
 
-#define CRYPTONOTE_NAME                         "blurx"
+#define CRYPTONOTE_NAME                         "focus"
 #define CRYPTONOTE_POOLDATA_FILENAME            "poolstate.bin"
 #define CRYPTONOTE_BLOCKCHAINDATA_FILENAME      "data.mdb"
 #define CRYPTONOTE_BLOCKCHAINDATA_LOCK_FILENAME "lock.mdb"
-#define P2P_NET_DATA_FILENAME                   "p2pstate.blurx.bin"
+#define P2P_NET_DATA_FILENAME                   "p2pstate.focus.bin"
 #define MINER_CONFIG_FILE_NAME                  "miner_conf.json"
 
 #define THREAD_STACK_SIZE                       5 * 1024 * 1024
@@ -154,17 +154,19 @@ namespace config
   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x7bb6; //Xb
   uint16_t const P2P_DEFAULT_PORT = 14565;
   uint16_t const RPC_DEFAULT_PORT = 14566;
-  uint16_t const ZMQ_RPC_DEFAULT_PORT = 17567;
+  uint16_t const ZMQ_RPC_DEFAULT_PORT = 14567;
   boost::uuids::uuid const NETWORK_ID = { {
-      0x12, 0x30, 0xF1, 0x71 , 0x61, 0x04 , 0x41, 0x61, 0x17, 0x31, 0x16, 0xA1, 0xA1, 0x12, 0x00, 0x82
-    } }; // Bender's nightmare
+      0x12, 0x30, 0xF1, 0xA1, 0x12, 0x71 , 0x61, 0x04 , 0x41, 0x61, 0x17, 0x31, 0x16, 0xA1, 0x00, 0x82
+    } }; // 
   std::string const GENESIS_TX = "010a01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101abf318a3dc8d66a0263839cffce83daa85963a27635a608a2ba9973055bcc8e400";
 
   uint32_t const GENESIS_NONCE = 10000;
 
   std::set<std::string> const seed_nodes = {
-      "51.75.88.54:17565",
-      "51.75.92.73:17565"};
+      "51.75.88.54:14565",
+      "51.75.92.73:14565"};
+
+      
 
   std::set<std::string> const seed_node_aliases = {};
 
@@ -174,13 +176,11 @@ namespace config
     uint16_t const RPC_DEFAULT_PORT = 18566;
     uint16_t const ZMQ_RPC_DEFAULT_PORT = 18567;
     boost::uuids::uuid const NETWORK_ID = { {
-        0x13, 0x22, 0xF0, 0x55 , 0x42, 0x18 , 0x40, 0x33, 0x16, 0x88, 0x01, 0xAA, 0xBC, 0xFF, 0x13, 0x92
-      } }; // Bender's daydream
+        0x13, 0x22, 0xF0, 0xBC, 0xFF, 0x55 , 0x42, 0x18 , 0x40, 0x33, 0x16, 0x88, 0x01, 0xAA, 0x13, 0x92
+      } }; // 
 
     std::set<std::string> const seed_nodes = {
-      "204.48.17.173:18565",
-      "206.81.2.10:18565",
-      "206.81.2.12:18565"};
+     };
 
     std::set<std::string> const seed_node_aliases = {};
   }
@@ -191,8 +191,8 @@ namespace config
     uint16_t const RPC_DEFAULT_PORT = 19566;
     uint16_t const ZMQ_RPC_DEFAULT_PORT = 19567;
     boost::uuids::uuid const NETWORK_ID = { {
-        0x14, 0x31, 0xF1, 0x22 , 0x54, 0x86 , 0x36, 0xFF, 0xAB, 0x51, 0x00, 0x3C, 0x3D, 0xAA, 0x16, 0x4F
-      } }; // Bender's daydream
+        0x14, 0x31, 0xF1, 0x3D, 0xAA, 0x22 , 0x54, 0x86 , 0x36, 0xFF, 0xAB, 0x51, 0x00, 0x3C, 0x16, 0x4F
+      } }; // 
   }
 }
 
