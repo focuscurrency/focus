@@ -972,7 +972,6 @@ namespace cryptonote
     uint16_t ww = (uint16_t)(seed % mt.next(1, 10000));
 
     crypto::cn_slow_hash(bd.data(), bd.size(), res, 2, 0x40000, ((height + 1) & 0x3F), r, salt, temp_lookup_1[m], xx, yy, zz, ww);
-    
 
     return true;
   }

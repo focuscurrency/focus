@@ -58,7 +58,7 @@
 
 #define MONEY_SUPPLY                                    ((uint64_t)(21000000000000000))
 #define EMISSION_SPEED_FACTOR_PER_MINUTE                (20)
-#define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000000) // 3 * pow(10, 11)
+#define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000) // 3 * pow(10, 11)
 
 #define CRYPTONOTE_REWARD_BLOCKS_WINDOW                 100
 #define CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1    300000
@@ -66,12 +66,12 @@
 #define CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE          600
 #define CRYPTONOTE_DISPLAY_DECIMAL_POINT                9
 // COIN - number of smallest units in one coin
-#define COIN                                            ((uint64_t)1000000000000) // pow(10, 12)
+#define COIN                                            ((uint64_t)1000000000) // pow(10, 9)
 
 #define DEFAULT_MIXIN                                   4
 #define DEFAULT_RINGSIZE                                DEFAULT_MIXIN + 1
-#define DYNAMIC_FEE_PER_KB_BASE_FEE                     ((uint64_t)400000000) // 4 * pow(10,8)))
-#define DYNAMIC_FEE_PER_KB_BASE_BLOCK_REWARD            ((uint64_t)10000000000000) // 10 * pow(10,12)
+#define DYNAMIC_FEE_PER_KB_BASE_FEE                     ((uint64_t)400000) // 4 * pow(10,5)))
+#define DYNAMIC_FEE_PER_KB_BASE_BLOCK_REWARD            ((uint64_t)10000000000) // 10 * pow(10,9)
 
 #define DIFFICULTY_TARGET                               60  // seconds
 
@@ -158,7 +158,7 @@ namespace config
   boost::uuids::uuid const NETWORK_ID = { {
       0x12, 0x30, 0xF1, 0xA1, 0x12, 0x71 , 0x61, 0x04 , 0x41, 0x61, 0x17, 0x31, 0x16, 0xA1, 0x00, 0x82
     } }; // 
-  std::string const GENESIS_TX = "010a14ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101d6b59d337acbb433abf3755f08575b33f073218ba6890c5637e6fd652c68813f00";
+  std::string const GENESIS_TX = "011401ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210152af60bfb750cec5eea454cdf127a6170e2d176bc41438d2326e4380b034f0af00";
 
   uint32_t const GENESIS_NONCE = 10000;
 
