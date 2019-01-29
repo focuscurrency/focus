@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The NERVA Project
+// Copyright (c) 2018, The FOCUS Project
 //Implementation of a Mersenne Twister random number generator
 #ifndef _MERSENNE_TWISTER_
 #define _MERSENNE_TWISTER_

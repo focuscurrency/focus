@@ -4,10 +4,10 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 bindir=${dir}/builder/build/$1/bin
 
-nd=${bindir}/nervad
-nw=${bindir}/nerva-wallet-cli
-nr=${bindir}/nerva-wallet-rpc
-datadir=~/.nerva/stagenet/
+nd=${bindir}/focusd
+nw=${bindir}/focus-wallet-cli
+nr=${bindir}/focus-wallet-rpc
+datadir=~/.focus/stagenet/
 
 addressA="NV1uKzZ6tjA6xhJ5zKRu2TGpvNvsmznNZgnJuhwHRv1jKzoCABvtDUgBdguJxWq1TSjDg9ge9zZ2c5r2CQZ4LTQD1dxntAmGW"
 addressB="NV3QRL7PwFZWs6Xw9ERf4E5GgjCZgRf3JNmCvyXAV2GAKpKHMmDK8cPTwBqwQjVLMA2G9M5iwh3AJM1e4LzWjuXH2UngCq4hV"
@@ -64,11 +64,11 @@ function startmac()
 
 function pop()
 {
-	killall nervad
+	killall focusd
 	rm -rf ${datadir}/node2
 	rm -rf ${datadir}/node3
 	rm -rf ${datadir}/node4
-	${bindir}/nerva-blockchain-import --stagenet --data-dir ${datadir}/node1 --pop-blocks $1
+	${bindir}/focus-blockchain-import --stagenet --data-dir ${datadir}/node1 --pop-blocks $1
 }
 
 $2 $3

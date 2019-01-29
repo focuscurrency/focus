@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The NERVA Project
+// Copyright (c) 2018, The FOCUS Project
 // Copyright (c) 2017-2018, The Masari Project
 // Copyright (c) 2014-2018, The Monero Project
 // 
@@ -674,15 +674,15 @@ namespace cryptonote
     switch (std::atomic_load(&default_decimal_point))
     {
       case 12:
-        return "nerva";
+        return "focus";
       case 9:
-        return "millinerva";
+        return "millifocus";
       case 6:
-        return "micronerva";
+        return "microfocus";
       case 3:
-        return "nanonerva";
+        return "nanofocus";
       case 0:
-        return "piconerva";
+        return "picofocus";
       default:
         ASSERT_MES_AND_THROW("Invalid decimal point specification: " << default_decimal_point);
     }

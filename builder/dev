@@ -3,7 +3,7 @@
 reset
 
 BUILDER_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-NERVA_DIR=$(dirname $BUILDER_DIR)
+FOCUS_DIR=$(dirname $BUILDER_DIR)
 source ${BUILDER_DIR}/env
 source ${BUILDER_DIR}/helpers
 source ${BUILDER_DIR}/linux-helpers
@@ -13,5 +13,5 @@ detectos
 
 mkdir -p ${BUILDER_DIR}/build/dev/$1
 cd ${BUILDER_DIR}/build/dev/$1
-cmake -D CMAKE_BUILD_TYPE=$1 -D BUILD_TAG=${NERVA_BUILD_DISTRO}-${NERVA_BUILD_DISTRO_VERSION} ../../../..
+cmake -D CMAKE_BUILD_TYPE=$1 -D BUILD_TAG=${FOCUS_BUILD_DISTRO}-${FOCUS_BUILD_DISTRO_VERSION} ../../../..
 make -j6

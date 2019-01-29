@@ -2,7 +2,7 @@
 
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-scp ${dir}/build/release/bin/nervad $1:/opt/nerva/nervad
-scp ${dir}/build/release/bin/nerva-blockchain-export $1:/opt/nerva/nerva-blockchain-export
-scp ${dir}/build/release/bin/nerva-wallet-rpc $1:/opt/nerva/nerva-wallet-rpc
+scp ${dir}/build/release/bin/focusd $1:/opt/focus/focusd
+scp ${dir}/build/release/bin/focus-blockchain-export $1:/opt/focus/focus-blockchain-export
+scp ${dir}/build/release/bin/focus-wallet-rpc $1:/opt/focus/focus-wallet-rpc
 

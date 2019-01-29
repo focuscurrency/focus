@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#For use with the nerva build system
-#https://bitbucket.org/nerva-project/nerva
+#For use with the focus build system
+#https://bitbucket.org/focus-project/focus
 
 BUILDER_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-NERVA_DIR=$(dirname ${BUILDER_DIR})
+FOCUS_DIR=$(dirname ${BUILDER_DIR})
 source ${BUILDER_DIR}/env
 source ${BUILDER_DIR}/helpers
 source ${BUILDER_DIR}/linux-helpers
@@ -31,4 +31,4 @@ chmod +x $lscript
 
 cp ${BUILDER_DIR}/${REPO_NAME}-logo-white.png ${BUILDER_DIR}/build/release/bin/${REPO_NAME}-logo-white.png
 cp ${BUILDER_DIR}/${REPO_NAME}-logo-black.png ${BUILDER_DIR}/build/release/bin/${REPO_NAME}-logo-black.png
-zip -rj ${NERVA_DIR}/${REPO_NAME}-v${NERVA_VERSION}_linux-x64.zip ${BUILDER_DIR}/build/release/bin/*
+zip -rj ${FOCUS_DIR}/${REPO_NAME}-v${FOCUS_VERSION}_linux-x64.zip ${BUILDER_DIR}/build/release/bin/*

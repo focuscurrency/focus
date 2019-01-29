@@ -4,7 +4,7 @@
 #https://github.com/xmranon/Nerva
 
 BUILDER_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-NERVA_DIR=$(dirname $BUILDER_DIR)
+FOCUS_DIR=$(dirname $BUILDER_DIR)
 source ${BUILDER_DIR}/env
 source ${BUILDER_DIR}/helpers
 
@@ -65,10 +65,10 @@ installdeps
 detectos
 detectversion
 
-#build nerva
+#build focus
 mkdir -p ${BUILDER_DIR}/build/release
 cd ${BUILDER_DIR}/build/release
-cmake -D CMAKE_BUILD_TYPE=release -D STATIC=ON -D BUILD_TAG=${NERVA_BUILD_DISTRO}-${NERVA_BUILD_DISTRO_VERSION} ../../..
+cmake -D CMAKE_BUILD_TYPE=release -D STATIC=ON -D BUILD_TAG=${FOCUS_BUILD_DISTRO}-${FOCUS_BUILD_DISTRO_VERSION} ../../..
 make -j4
 
 lscript=${BUILDER_DIR}/build/release/bin/install
@@ -82,6 +82,6 @@ echo "function $(declare -f install)" >> $lscript
 echo "install" >> $lscript
 chmod +x $lscript
 
-zip -rj ${NERVA_DIR}/${REPO_NAME}-v${NERVA_VERSION}_osx-x64.zip ${BUILDER_DIR}/build/release/bin/*
+zip -rj ${FOCUS_DIR}/${REPO_NAME}-v${FOCUS_VERSION}_osx-x64.zip ${BUILDER_DIR}/build/release/bin/*
 
 clean

@@ -1,6 +1,6 @@
-# NERVA
+# FOCUS
 
-Copyright (c) 2018 The NERVA Project.
+Copyright (c) 2018 The FOCUS Project.
 
 Copyright (c) 2017-2018 The Masari Project.
 
@@ -15,12 +15,12 @@ See [LICENSE](LICENSE).
 
 ## Where to get help
 
-Discord is the preferred method of communication for NERVA
+Discord is the preferred method of communication for FOCUS
 
 [Discord](https://discord.gg/jsdbEns)
 
-## Compiling NERVA from source
+## Compiling FOCUS from source
 
-[Building the NERVA CLI tools](https://bitbucket.org/snippets/nerva-project/kejLB4/building-the-nerva-cli-tools): To build and run the CLI tools
+[Building the FOCUS CLI tools](https://bitbucket.org/snippets/focus-project/kejLB4/building-the-focus-cli-tools): To build and run the CLI tools
 
-[NERVA CLI: Getting Started](https://bitbucket.org/snippets/nerva-project/KeLrBy/nerva-cli-getting-started): To get the basics on how to create a wallet and mine NERVA, along with some useful information on common commands
+[FOCUS CLI: Getting Started](https://bitbucket.org/snippets/focus-project/KeLrBy/focus-cli-getting-started): To get the basics on how to create a wallet and mine FOCUS, along with some useful information on common commands
