@@ -73,7 +73,7 @@
 #define DYNAMIC_FEE_PER_KB_BASE_FEE                     ((uint64_t)400000000) // 4 * pow(10,8)))
 #define DYNAMIC_FEE_PER_KB_BASE_BLOCK_REWARD            ((uint64_t)10000000000000) // 10 * pow(10,12)
 
-#define DIFFICULTY_TARGET                               40  // seconds
+#define DIFFICULTY_TARGET                               45  // seconds
 
 #define UNCLE_DIFFICULTY_TARGET                         DIFFICULTY_TARGET/4
 #define UNCLE_REWARD_RATIO                              2
