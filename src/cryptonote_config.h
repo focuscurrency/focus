@@ -56,7 +56,7 @@
 #define CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT              60*5
 
 
-#define MONEY_SUPPLY                                    ((uint64_t)(21000000000000000))
+#define MONEY_SUPPLY                                    ((uint64_t)(12000000000000000))
 #define EMISSION_SPEED_FACTOR_PER_MINUTE                (20)
 #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000) // 3 * pow(10, 11)
 
