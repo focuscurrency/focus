@@ -498,9 +498,9 @@ namespace cryptonote
       {
         //we lucky!
         ++m_config.current_extra_message_index;
-        MGINFO_GREEN("Found block at height: " << height);
+        MGINFO_GREEN("Alright, alright, alright! Found a block at height: " << height);
 	if (is_uncle_block_included(b)) {
-          MGINFO_GREEN("Uncle mined: " << b.uncle);
+          MGINFO_GREEN("Uncle mined! You saved little timmy at height: " << b.uncle);
         }
         if(!m_phandler->handle_block_found(b))
         {
